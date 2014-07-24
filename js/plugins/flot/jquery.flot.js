@@ -2739,8 +2739,8 @@ Licensed under the MIT license.
                 }
 
                 fragments.push(
-                    '<td class="legendColorBox"><div style="border:1px solid ' + options.legend.labelBoxBorderColor + ';padding:1px"><div style="width:4px;height:0;border:5px solid ' + entry.color + ';overflow:hidden"></div></div></td>' +
-                    '<td class="legendLabel">' + entry.label + '</td>'
+                    '<td class="legendColorBox" style="padding:2px;"><div style="border:1px solid ' + options.legend.labelBoxBorderColor + ';padding:2px"><div style="width:4px;height:0;border:5px solid ' + entry.color + ';overflow:hidden"></div></div></td>' +
+                    '<td class="legendLabel"><div style="padding:0px 10px 0px 5px; text-align:left;">' + entry.label + '</div></td>'
                 );
             }
 
