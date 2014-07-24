@@ -295,7 +295,7 @@
                                     </div>
                                 </div>
                                 <div class="box-body">
-                                     <td><div id="legends" style="width:600px;"></div></td>
+                                     <td><div align="right"><div id="legendContainer" style="width:230px;"></div></div></td>
                                     <div id="placeholder" style="width:975px;height:300px;"></div>
                                 </div><!-- /.box-body-->
                             <div class="box-body table-responsive no-padding">
@@ -350,7 +350,7 @@
         <script src="js/plugins/flot/jquery-1.8.3.min.js" type='text/javascript'></script> 
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/plugins/flot/excanvas.min.js"></script><![endif]-->
         <script src="js/plugins/flot/jquery.flot.stackpercent.js" type="text/javascript"></script>
-        <script src="js/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+        <script src="js/plugins/flot/jquery.flot.js" type="text/javascript"></script>
         <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
         <script src="js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
     <!-- Bootstrap WYSIHTML5 -->
@@ -385,7 +385,7 @@ $(function () {
             }
         },
         legend : {
-            container : "#legends",
+            container : "#legendContainer",
             noColumns : 3
         },
         xaxis: {tickSize : 1},
@@ -396,6 +396,16 @@ $(function () {
 
 });
 
+ /*
+             * Custom Label formatter
+             * ----------------------
+             */
+            function labelFormatter(label, series) {
+                return "<div style='font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;'>"
+                        + label
+                        + "<br/>"
+                        + Math.round(series.percent) + "%</div>";
+            }
 
 </script>
     </body>
